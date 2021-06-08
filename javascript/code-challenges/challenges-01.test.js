@@ -27,7 +27,7 @@ Use `forEach` to loop over the input array. Modify each string, and add the upda
 
 const addExclamation = (arr) => {
   // Solution code here...
-  let=newArr=[];
+  let newArr=[];
   arr.forEach((val)=>{
     newArr.push(val+'!')
   });
@@ -45,7 +45,7 @@ Use `forEach` to loop over the input array. The modified strings should each be 
 
 const allUpperCase = (arr) => {
   // Solution code here...
-  let=newArr=[];
+  let newArr=[];
   arr.forEach((val)=>{
     newArr.push(val.toUpperCase())
   });
@@ -65,7 +65,7 @@ Use `forEach` to build a new array of strings, each string modified by the callb
 
 const greeting = (word) => {
   // Solution code here...'
-  let=newArr=[];
+  let newArr=[];
     word.forEach((val)=>{
       newArr.push(val.toUpperCase()+'!')
     });
