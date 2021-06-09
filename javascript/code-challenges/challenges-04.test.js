@@ -45,9 +45,9 @@ For example: 'Cat' would come before 'apple'
 const sortNames = (arr) => {
   // Solution code here...
   arr.sort((a,b) => {
-       if (a.toUpperCase() > b.toUpperCase()){
+       if (a.toUpperCase() > b.toLowerCase()){
          return -1;
-       }else if (a.toUpperCase() < b.toUpperCase()){
+       }else if (a.toUpperCase() < b.toLowerCase()){
            return 1
          }else{
            return 0
@@ -111,13 +111,13 @@ For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 const alphabetize = (arr) => {
   // Solution code here...
   arr.sort((a,b) => {
-    if (a.toUpperCase() > b.toUpperCase()){
-      return -1;
-    }else if (a.toUpperCase() < b.toUpperCase()){
-        return 1
-      }else{
+    if (a > b){
+      return 1;
+    }else if (a < b){
+       return -1;
+    }else{
         return 0
-      }
+     }
    })
 };
 
@@ -136,6 +136,15 @@ Here is an example of the input:
 
 const sortByPrice = (arr) => {
   // Solution code here...
+  arr.sort((a,b) => {
+    if (a.price > b.price){
+      return 1;
+    }else if (a.price < b.price){
+       return -1;
+    }else{
+        return 0
+     }
+   })
 };
 
 /* ------------------------------------------------------------------------------------------------
