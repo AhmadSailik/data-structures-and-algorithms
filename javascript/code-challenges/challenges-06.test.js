@@ -24,11 +24,11 @@ Returns: ['dyoll', 'eimaj'];
 
 const getNames = (arr) => {
   // Solution code here...
-  arr.map((item,idx)=>{
-    return(
-      arr.name
-    )
+  let returns=[]
+  arr.map((item)=>{
+  returns.push(item.name) 
   })
+  return returns
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -40,7 +40,7 @@ Write a function that appends ' The end.' to a string, and returns the modified 
 
 const appendTheEnd = (str) => {
   // Solution code here...
-  const b = appendTheEnd(str);
+ 
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -58,6 +58,8 @@ console.log(a) prints [1, 2, 3, 1]
 
 const appendFirstToLast = (arr) => {
   // Solution code here...
+  arr.splice(arr.length, 0, arr[0])
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
