@@ -24,14 +24,16 @@ function lower(str) {
 const updateAnimal = (arr, callback) => {
   // Solution code here...
   arr.sort((a,b) => {
-    if (a.toUpperCase() > b.toUpperCase()){
+    if (callback(a) > callback(b)){
       return 1;
-    }else if (a.toUpperCase() < b.toUpperCase()){
+    }else if (callback(a) < callback(b)){
         return -1
       }else{
         return 0
       }
    })
+   let newArr=arr.map((val)=>callback(val))
+   return newArr
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -46,13 +48,14 @@ const sortNames = (arr) => {
   // Solution code here...
   arr.sort((a,b) => {
        if (a.toUpperCase() > b.toLowerCase()){
-         return -1;
+         return 1;
        }else if (a.toUpperCase() < b.toLowerCase()){
-           return 1
+           return -1
          }else{
            return 0
          }
       })
+      return arr
     };
 
 /* ------------------------------------------------------------------------------------------------
@@ -74,7 +77,7 @@ const sortNumbers = (arr) => {
         return 0
     }
    })
-  
+   return arr
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -96,6 +99,7 @@ const sortBackwards = (arr) => {
         return 0
     }
    })
+   return arr
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -119,6 +123,7 @@ const alphabetize = (arr) => {
         return 0
      }
    })
+   return arr
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -145,6 +150,8 @@ const sortByPrice = (arr) => {
         return 0
      }
    })
+  
+   return arr
 };
 
 /* ------------------------------------------------------------------------------------------------
