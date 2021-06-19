@@ -13,11 +13,13 @@ You can assume that neither firstName nor lastName will be blank
 ------------------------------------------------------------------------------------------------ */
 const toLastNames = people => {
   // Solution code here...
-  let newarray=people.reduce((newm,val,idx)=>{
-    newm.push(`${val.firstName} ${val.lastName}`)
-    return newm
-    
-  },[]);
+  let newArr=[]
+  people.reduce((newm,val,idx)=>{
+     newArr.push(`${val.firstName} ${val.lastName}`)
+     
+     
+   },[]);
+   return newArr
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -34,6 +36,7 @@ const addValues = (arr) => {
     return newm
     
   },0);
+  return newarray
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -55,6 +58,7 @@ const addPurchases = (arr) => {
     return newm
     
   },0);
+  return newarray
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -72,6 +76,7 @@ const countNumberOfElements = (arr) => {
     return newm
     
   },0);
+  return newarray
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -137,6 +142,7 @@ const returnNames = (arr) => {
     return newm
     
   },[]);
+  return newarray
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -149,6 +155,13 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 
 const reversedString = (str) => {
   // Solution code here...
+  let split=str.split('')
+  let newarray=split.reduce((newm,val)=>{
+    newm=val+newm
+    return newm
+    
+  },'');
+  return newarray
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -214,12 +227,7 @@ Hint: The accumulator should begin as { count: 0, sum: 0 }
 
 const calculateAverage = (arr) => {
   // Solution code here...
-  let split=arr.split('')
-  let newarray=split.reduce((newm,val)=>{
-    newm=val+newm
-    return newm
-    
-  },'');
+ 
 };
 
 /* ------------------------------------------------------------------------------------------------
