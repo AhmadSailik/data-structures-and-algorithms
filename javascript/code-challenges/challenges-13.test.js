@@ -101,7 +101,13 @@ For example, 'abcdefg' returns 'bdf'
 
 const onlyOddChars = (str) => {
   // Solution code here...
+  let newString = ""; 
+  for (let i in str) {
+  i % 2 != 0 ? (newString += str[i]) : newString;  
+  }
+  return newString;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 
@@ -111,6 +117,8 @@ Write a function named allHappy that takes in an array of strings and returns a 
 
 const allHappy = (arr) => {
   // Solution code here...
+  let arr2 = arr.filter((item) =>{    return item.includes(":)");  });
+  return arr2.length == arr.length ? true : false
 };
 
 /* ------------------------------------------------------------------------------------------------
